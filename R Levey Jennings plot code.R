@@ -11,7 +11,7 @@ mean_value <- 142
 sd_value <- 3
 
 chart_data <- data.frame(
-  observation = seq_along(results),
+  days = seq_along(results),
   result = results
 )
 
@@ -20,7 +20,7 @@ control_lines <- data.frame(
   label = c("-3 SD", "-2 SD", "-1 SD", "Mean", "+1 SD", "+2 SD", "+3 SD")
 )
 
-ggplot(chart_data, aes(x = observation, y = result)) +
+ggplot(chart_data, aes(x = days, y = result)) +
   geom_hline(
     data = control_lines,
     aes(yintercept = level, color = label),
@@ -35,7 +35,7 @@ ggplot(chart_data, aes(x = observation, y = result)) +
     "Mean" = "blue",
     "+1 SD" = "gold", "+2 SD" = "orange", "+3 SD" = "red"
   ), guide = "none") +
-  scale_x_continuous(breaks = chart_data$observation) +
+  scale_x_continuous(breaks = chart_data$days) +
   scale_y_continuous(
     breaks = control_lines$level,
     sec.axis = sec_axis(
