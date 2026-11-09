@@ -1,4 +1,3 @@
 # Levey-Jennings-Chart
-Wallah, I won't (hopefully) need to touch this again
-
+Wallah
 **Libraries used tidyverse: dplyr & ggplot2**
