@@ -2,7 +2,7 @@ library(dplyr)
 library(ggplot2)
 
 data <- Sodium_Levy_Jennings |>
-  select(1:2)
+  select(1:2) #Can delete this part if you don't need it, my imported csv was whack
 
 results <- as.numeric(as.character(data[[2]]))
 results <- results[is.finite(results)]
